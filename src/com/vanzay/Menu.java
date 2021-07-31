@@ -43,7 +43,6 @@ public class Menu {
 
             actions.get(choice).doAction();
             System.out.println("Press enter to go to the menu.");
-            scanner.nextLine();
         }
     }
 }

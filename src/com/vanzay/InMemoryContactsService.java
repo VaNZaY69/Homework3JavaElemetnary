@@ -12,17 +12,6 @@ public class InMemoryContactsService implements ContactsService {
         this.scanner = scanner;
     }
 
-    public void getSearchedContacts() {
-        System.out.println("Enter the name or part of the contact you are looking for:");
-        String enteredStr = scanner.nextLine();
-        for (int i = 0; i < contactsList.size(); i++) {
-            if (contactsList.get(i).getName().contains(enteredStr)) {
-                System.out.println((i + 1) + ") " + contactsList.get(i));
-            }
-
-        }
-    }
-
     @Override
     public ArrayList<Contact> getAll() {
         return contactsList;
