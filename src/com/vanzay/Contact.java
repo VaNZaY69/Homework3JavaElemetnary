@@ -1,8 +1,8 @@
 package com.vanzay;
 
 public class Contact {
-    private String name;
-    private String phone;
+    private final String name;
+    private final String phone;
 
     public Contact(String name, String phone) {
         this.name = name;
@@ -11,18 +11,6 @@ public class Contact {
 
     public String getName() {
         return name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     @Override

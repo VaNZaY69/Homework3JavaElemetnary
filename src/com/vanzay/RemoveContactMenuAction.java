@@ -2,9 +2,9 @@ package com.vanzay;
 
 import java.util.Scanner;
 
-public class RemoveContactMenuAction implements MenuAction{
-    private Scanner scanner;
-    private InMemoryContactsService service;
+public class RemoveContactMenuAction implements MenuAction {
+    private final Scanner scanner;
+    private final InMemoryContactsService service;
 
     public RemoveContactMenuAction(Scanner scanner, InMemoryContactsService service) {
         this.scanner = scanner;

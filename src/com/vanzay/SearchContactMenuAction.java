@@ -1,13 +1,9 @@
 package com.vanzay;
 
-import java.util.Scanner;
+public class SearchContactMenuAction implements MenuAction {
+    private final InMemoryContactsService service;
 
-public class SearchContactMenuAction implements MenuAction{
-    private Scanner scanner;
-    private InMemoryContactsService service;
-
-    public SearchContactMenuAction(Scanner scanner, InMemoryContactsService service) {
-        this.scanner = scanner;
+    public SearchContactMenuAction(InMemoryContactsService service) {
         this.service = service;
     }
 
