@@ -23,11 +23,4 @@ public class ReadAllContactsMenuAction implements MenuAction{
         return "Read all contacts";
     }
 
-    @Override
-    public boolean closeAfter() {
-        // доработать
-        System.out.println("Exit the program, enter 1, if you want to continue, enter 2");
-        int choice = scanner.nextInt();
-        return choice == 1;
-    }
 }
