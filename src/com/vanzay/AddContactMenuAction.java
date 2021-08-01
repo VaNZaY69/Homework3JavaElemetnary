@@ -29,4 +29,14 @@ public class AddContactMenuAction implements MenuAction {
     public String getName() {
         return "Add contact";
     }
+
+    @Override
+    public boolean closedAfter() {
+        System.out.print("To return to the menu, enter - 1, exit - 2: ");
+        int choice = scanner.nextInt();
+        if (choice < 1 || choice > 2) {
+            System.out.println("Incorrect input");
+        } else return choice == 2;
+        return false;
+    }
 }

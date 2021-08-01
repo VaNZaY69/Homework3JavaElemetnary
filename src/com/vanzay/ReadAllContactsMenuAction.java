@@ -1,9 +1,13 @@
 package com.vanzay;
 
+import java.util.Scanner;
+
 public class ReadAllContactsMenuAction implements MenuAction {
     private final InMemoryContactsService service;
+    Scanner scanner;
 
-    public ReadAllContactsMenuAction(InMemoryContactsService service) {
+    public ReadAllContactsMenuAction(Scanner scanner, InMemoryContactsService service) {
+        this.scanner = scanner;
         this.service = service;
     }
 
@@ -17,6 +21,16 @@ public class ReadAllContactsMenuAction implements MenuAction {
     @Override
     public String getName() {
         return "Read all contacts";
+    }
+
+    @Override
+    public boolean closedAfter() {
+        System.out.print("To return to the menu, enter - 1, exit - 2: ");
+        int choice = scanner.nextInt();
+        if (choice < 1 || choice > 2) {
+            System.out.println("Incorrect input");
+        } else return choice == 2;
+        return false;
     }
 
 }

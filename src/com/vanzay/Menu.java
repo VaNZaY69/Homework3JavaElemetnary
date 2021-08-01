@@ -42,7 +42,7 @@ public class Menu {
             if (choice == actions.size()) break;
 
             actions.get(choice).doAction();
-            System.out.println("Press enter to go to the menu.");
+            if (actions.get(choice).closedAfter()) break;
         }
     }
 }

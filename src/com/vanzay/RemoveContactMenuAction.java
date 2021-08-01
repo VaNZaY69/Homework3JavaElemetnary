@@ -24,4 +24,13 @@ public class RemoveContactMenuAction implements MenuAction {
         return "Remove contact";
     }
 
+    @Override
+    public boolean closedAfter() {
+        System.out.print("To return to the menu, enter - 1, exit - 2: ");
+        int choice = scanner.nextInt();
+        if (choice < 1 || choice > 2) {
+            System.out.println("Incorrect input");
+        }
+        return choice == 2;
+    }
 }
