@@ -13,6 +13,17 @@ public class InMemoryContactsService implements ContactsService {
     }
 
     @Override
+    public ArrayList<Contact> getSearchContact(String enteredStr) {
+        ArrayList<Contact> desiredContact = new ArrayList<>();
+        for (Contact contact : contactsList) {
+            if (contact.getName().contains(enteredStr)) {
+                desiredContact.add(contact);
+            }
+        }
+        return desiredContact;
+    }
+
+    @Override
     public ArrayList<Contact> getAll() {
         return contactsList;
     }

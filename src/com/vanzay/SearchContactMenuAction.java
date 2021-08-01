@@ -15,10 +15,8 @@ public class SearchContactMenuAction implements MenuAction {
     public void doAction() {
         System.out.println("Enter the name or part of the contact you are looking for:");
         String enteredStr = scanner.nextLine();
-        for (int i = 0; i < service.getAll().size(); i++) {
-            if (service.getAll().get(i).getName().contains(enteredStr)) {
-                System.out.println((i + 1) + ") " + service.getAll().get(i));
-            }
+        for (int i = 0; i < service.getSearchContact(enteredStr).size(); i++) {
+            System.out.println((i + 1) + ") " + service.getSearchContact(enteredStr).get(i));
         }
     }
 
