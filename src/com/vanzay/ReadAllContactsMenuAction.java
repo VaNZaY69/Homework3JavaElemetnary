@@ -3,10 +3,10 @@ package com.vanzay;
 import java.util.Scanner;
 
 public class ReadAllContactsMenuAction implements MenuAction {
-    private final InMemoryContactsService service;
+    private final ContactsService service;
     Scanner scanner;
 
-    public ReadAllContactsMenuAction(Scanner scanner, InMemoryContactsService service) {
+    public ReadAllContactsMenuAction(Scanner scanner, ContactsService service) {
         this.scanner = scanner;
         this.service = service;
     }

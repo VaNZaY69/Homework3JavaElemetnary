@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class RemoveContactMenuAction implements MenuAction {
     private final Scanner scanner;
-    private final InMemoryContactsService service;
+    private final ContactsService service;
 
-    public RemoveContactMenuAction(Scanner scanner, InMemoryContactsService service) {
+    public RemoveContactMenuAction(Scanner scanner, ContactsService service) {
         this.scanner = scanner;
         this.service = service;
     }
