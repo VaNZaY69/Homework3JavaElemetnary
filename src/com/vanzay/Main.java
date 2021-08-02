@@ -13,7 +13,7 @@ public class Main {
 
         ArrayList<Contact> contactsList = new ArrayList<>();
 
-        ContactsService service = new InMemoryContactsService(scanner, contactsList);
+        ContactsService service = new InMemoryContactsService(contactsList);
 
         Menu menu = new Menu(scanner, actions);
         menu.addAction(new AddContactMenuAction(scanner, service));

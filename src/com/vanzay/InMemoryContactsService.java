@@ -1,15 +1,12 @@
 package com.vanzay;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class InMemoryContactsService implements ContactsService {
     private final ArrayList<Contact> contactsList;
-    Scanner scanner;
 
-    public InMemoryContactsService(Scanner scanner, ArrayList<Contact> contactsList) {
+    public InMemoryContactsService(ArrayList<Contact> contactsList) {
         this.contactsList = contactsList;
-        this.scanner = scanner;
     }
 
     @Override
