@@ -1,4 +1,4 @@
-package com.vanzay;
+package com.vanzay.menu;
 
 import java.util.List;
 import java.util.Scanner;

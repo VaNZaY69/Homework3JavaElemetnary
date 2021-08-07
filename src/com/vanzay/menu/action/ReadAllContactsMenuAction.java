@@ -1,29 +1,29 @@
-package com.vanzay;
+package com.vanzay.menu.action;
+
+import com.vanzay.services.ContactsService;
+import com.vanzay.menu.MenuAction;
 
 import java.util.Scanner;
 
-public class AddContactMenuAction implements MenuAction {
-    private final Scanner scanner;
+public class ReadAllContactsMenuAction implements MenuAction {
     private final ContactsService service;
+    Scanner scanner;
 
-    public AddContactMenuAction(Scanner scanner, ContactsService service) {
+    public ReadAllContactsMenuAction(Scanner scanner, ContactsService service) {
         this.scanner = scanner;
         this.service = service;
     }
 
     @Override
     public void doAction() {
-        System.out.print("Enter contact name: ");
-        String nameContact = scanner.nextLine();
-        System.out.print("Enter the contact's phone number: ");
-        String phoneContact = scanner.nextLine();
-        service.add(new Contact(nameContact, phoneContact));
-        System.out.println("The contact has been added.");
+        for (int i = 0; i < service.getAll().size(); i++) {
+            System.out.println((i + 1) + ") " + service.getAll().get(i));
+        }
     }
 
     @Override
     public String getName() {
-        return "Add contact";
+        return "Read all contacts";
     }
 
     @Override
@@ -35,4 +35,5 @@ public class AddContactMenuAction implements MenuAction {
         } else return choice == 2;
         return false;
     }
+
 }

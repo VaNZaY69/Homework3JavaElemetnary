@@ -1,4 +1,6 @@
-package com.vanzay;
+package com.vanzay.services;
+
+import com.vanzay.models.Contact;
 
 import java.util.ArrayList;
 

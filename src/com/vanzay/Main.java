@@ -1,5 +1,15 @@
 package com.vanzay;
 
+import com.vanzay.menu.Menu;
+import com.vanzay.menu.MenuAction;
+import com.vanzay.menu.action.AddContactMenuAction;
+import com.vanzay.menu.action.ReadAllContactsMenuAction;
+import com.vanzay.menu.action.RemoveContactMenuAction;
+import com.vanzay.menu.action.SearchContactMenuAction;
+import com.vanzay.models.Contact;
+import com.vanzay.services.ContactsService;
+import com.vanzay.services.InMemoryContactsService;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

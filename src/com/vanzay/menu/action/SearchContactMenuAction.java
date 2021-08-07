@@ -1,4 +1,7 @@
-package com.vanzay;
+package com.vanzay.menu.action;
+
+import com.vanzay.services.ContactsService;
+import com.vanzay.menu.MenuAction;
 
 import java.util.Scanner;
 

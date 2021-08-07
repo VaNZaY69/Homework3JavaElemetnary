@@ -1,4 +1,7 @@
-package com.vanzay;
+package com.vanzay.services;
+
+import com.vanzay.models.Contact;
+import com.vanzay.utils.ListUtils;
 
 import java.util.ArrayList;
 
@@ -11,13 +14,8 @@ public class InMemoryContactsService implements ContactsService {
 
     @Override
     public ArrayList<Contact> getSearchContact(String enteredStr) {
-        ArrayList<Contact> desiredContact = new ArrayList<>();
-        for (Contact contact : contactsList) {
-            if (contact.getName().contains(enteredStr)) {
-                desiredContact.add(contact);
-            }
-        }
-        return desiredContact;
+        return (ArrayList<Contact>) ListUtils.filter(contactsList,
+                contact -> contact.getName().contains(enteredStr));
     }
 
     @Override

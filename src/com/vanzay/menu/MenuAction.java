@@ -1,4 +1,4 @@
-package com.vanzay;
+package com.vanzay.menu;
 
 public interface MenuAction {
     void doAction();

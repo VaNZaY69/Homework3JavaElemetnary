@@ -1,4 +1,4 @@
-package com.vanzay;
+package com.vanzay.models;
 
 public class Contact {
     private final String name;
